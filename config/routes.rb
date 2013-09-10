@@ -1,4 +1,12 @@
 DemoApp::Application.routes.draw do
+  resources :microposts
+
+  resources :users
+
+  def index
+    @users = User.all
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
